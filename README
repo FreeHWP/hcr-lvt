@@ -5,8 +5,9 @@ Scripts and feature files for making HCR LVT fonts
 
 Hamchorom (HCR) fonts are Korean fonts bundled in Hangul Word Processor
 (HWP) program, and the fonts are freely downloadable at
-https://www.hancom.com. These scripts target HCR fonts version 2.120
-(build 20170407).
+https://www.hancom.com/support/downloadCenter/download
+(direct link: https://cdn.hancom.com/pds/docs/HancomFont.zip).
+These scripts target HCR fonts version 2.120 (build 20170407).
 
 The fonts contain Old Hangul glyphs for conjoining jamo characters,
 but their OpenType support outside HWP is incomplete: no vertical
