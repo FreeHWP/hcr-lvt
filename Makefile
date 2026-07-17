@@ -45,5 +45,5 @@ dist-source:
 		hcr-lvt/*.tex hcr-lvt/Makefile* hcr-lvt/README 
 
 dist-font:
-	cd .. && zip Hamchorom-LVT.zip hcr-lvt/HAN*-LVT.ttf
+	cd .. && zip Hamchorom-LVT.zip hcr-lvt/HCR*-LVT.ttf
 
