@@ -10,6 +10,14 @@ hcr = fontforge.open(infile)
 
 family = hcr.familyname[4:]
 
+### drop native jamo lookups; our feature files replace them
+for lookup in hcr.gsub_lookups:
+    feats = hcr.getLookupInfo(lookup)[2]
+    tags = set(f[0] for f in feats)
+    scripts = set(s[0] for f in feats for s in f[1])
+    if tags & {"ljmo","vjmo","tjmo"} or ("rlig" in tags and "hang" in scripts):
+        hcr.removeLookup(lookup)
+
 ### turn on vertical metrics
 hcr.hasvmetrics = 1
 
@@ -30,7 +38,7 @@ hcr["space"].vwidth = 525
 ### make jungseong/jongseong full-width
 for j in list(range(0x1100,0x115F))+list(range(0xA960,0xA97D)):
     jamo = "uni%04X" % j
-    hcr[jamo].left_side_bearing = (hcr[jamo].left_side_bearing + hcr[jamo].right_side_bearing) //2
+    hcr[jamo].left_side_bearing = int(hcr[jamo].left_side_bearing + hcr[jamo].right_side_bearing) // 2
     hcr[jamo].width = 970
 
 hcr["uni1160"].width = 970
@@ -38,7 +46,7 @@ hcr["uni1160"].width = 970
 for j in list(range(0x1161,0x1200))+list(range(0xD7B0,0xD7C7))+list(range(0xD7CB,0xD7FC)):
     jamo = "uni%04X" % j
     hcr[jamo].transform((1,0,0,1,970,0))
-    hcr[jamo].left_side_bearing = (hcr[jamo].left_side_bearing + hcr[jamo].right_side_bearing) //2
+    hcr[jamo].left_side_bearing = int(hcr[jamo].left_side_bearing + hcr[jamo].right_side_bearing) // 2
     hcr[jamo].width = 970
 
 
@@ -84,7 +92,7 @@ if feafile.find("win") < 0 and feafile.find("mac") < 0: # no windows, no mac
 ### positive width of Tone Marks
 for tm in ["uni302E", "uni302F"]:
     wd = -hcr[tm].left_side_bearing - hcr[tm].right_side_bearing
-    hcr[tm].left_side_bearing = (250 - wd) // 2
+    hcr[tm].left_side_bearing = int(250 - wd) // 2
     hcr[tm].width = 250
     newchrname = tm+".vert"
     hcr.createChar(-1, newchrname)
