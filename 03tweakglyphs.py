@@ -18,6 +18,16 @@ for lookup in hcr.gsub_lookups:
     if tags & {"ljmo","vjmo","tjmo"} or ("rlig" in tags and "hang" in scripts):
         hcr.removeLookup(lookup)
 
+### remove buggy glyphs
+hcr.removeGlyph(-1, "uni302F.vert")
+hcr.removeGlyph(-1, "uni302E.vert")
+hcr.removeGlyph(-1, "Oldhangul_1")
+hcr.removeGlyph(-1, "Oldhangul_705Oldhangul_702")
+hcr.removeGlyph(-1, "Oldhangul_3254")
+hcr.removeGlyph(-1, "Oldhangul_3253")
+hcr.removeGlyph(-1, "Oldhangul_705glyph702")
+
+
 ### turn on vertical metrics
 hcr.hasvmetrics = 1
 

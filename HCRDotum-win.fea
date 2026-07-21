@@ -1,7 +1,7 @@
 
 include(HCR-header.fea)
 
-include(HCR-ccmp.fea)
+#include(HCR-ccmp.fea)
 
 include(HCR-yethangul-win.fea)
 

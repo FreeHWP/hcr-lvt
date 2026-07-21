@@ -24,12 +24,9 @@ feature halt {
 
 feature vert {
     sub period by uniFE12 ;
-#    sub period by uniFF0E ;
-    sub comma by uniFE11 ;
-#    sub exclam by uniFE15 ;
-    sub exclam by uniFF01 ;
-#    sub question by uniFE16 ;
-    sub question by uniFF1F ;
+    sub comma by uniFE10 ; # <- FE11
+    sub exclam by uniFE15 ; # <- FF01
+    sub question by uniFE16 ; # <- FF1F
     sub parenleft by uniFE35 ;
     sub parenright by uniFE36 ;
     sub colon by uniFE13 ;
@@ -70,16 +67,16 @@ feature vert {
     sub uni3011 by uniFE3C ;
     sub uni3014 by uniFE39 ;
     sub uni3015 by uniFE3A ;
-#    sub uniFF01 by uniFE15 ; # !
+    sub uniFF01 by uniFE15 ; # !
     sub uniFF08 by uniFE35 ;
     sub uniFF09 by uniFE36 ;
-    sub uniFF0C by uniFE11 ;
+    sub uniFF0C by uniFE10 ; # <- FE11
     sub uniFF0E by uniFE12 ;
     sub uniFF1A by uniFE13 ;
     sub uniFF1B by uniFE14 ;
     sub uniFF1C by uniFE3F ;
     sub uniFF1E by uniFE40 ;
-#    sub uniFF1F by uniFE16 ; # ?
+    sub uniFF1F by uniFE16 ; # ?
     sub uniFF3B by uniFE47 ;
     sub uniFF3D by uniFE48 ;
     sub uniFF5B by uniFE37 ;

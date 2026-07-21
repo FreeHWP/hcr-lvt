@@ -67,11 +67,13 @@ Building
 Pre-built binaries
 ------------------
 
-* TeX or Linux:	http://ftp.ktug.org/KTUG/hcr-lvt/tex/Hamchorom-LVT.zip
+* Version 2.120 (tested with TeX only): https://github.com/dohyunkim/hcr-lvt/releases
 
-* Mac OS X:	http://ftp.ktug.org/KTUG/hcr-lvt/mac/hcr-lvt-mac.zip
+* Version 1.981 (links are not reachable currently):
 
-* Windows OS:	http://ftp.ktug.org/KTUG/hcr-lvt/windows/hcr-lvt-win.zip
+	- TeX or Linux:	http://ftp.ktug.org/KTUG/hcr-lvt/tex/Hamchorom-LVT.zip
+	- Mac OS X:	http://ftp.ktug.org/KTUG/hcr-lvt/mac/hcr-lvt-mac.zip
+	- Windows OS:	http://ftp.ktug.org/KTUG/hcr-lvt/windows/hcr-lvt-win.zip
 
 
 That's all.
